@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:get/get.dart';
 import 'package:flutter_firebase_instagram/src/domain/repositories/i_auth_repository.dart';
-import 'package:flutter_firebase_instagram/src/presentation/app_colors.dart';
 import 'package:flutter_firebase_instagram/src/presentation/screens/login_screen.dart';
 import 'package:flutter_firebase_instagram/src/presentation/screens/tabs_screen.dart';
 import 'package:flutter_firebase_instagram/src/presentation/widgets/loader.dart';
@@ -30,7 +29,7 @@ class AuthController extends GetxController {
       Loader.close();
       Snackbar.open(
         e.toString(),
-        color: AppColors.red
+        type: SnackbarType.error
       );
     }
   }
@@ -51,7 +50,7 @@ class AuthController extends GetxController {
       Loader.close();
       Snackbar.open(
         e.toString(),
-        color: AppColors.red
+        type: SnackbarType.error
       );
     }
   }
@@ -66,7 +65,7 @@ class AuthController extends GetxController {
       Loader.close();
       Snackbar.open(
         e.toString(),
-        color: AppColors.red
+        type: SnackbarType.error
       );
     }
   }
@@ -88,7 +87,7 @@ class AuthController extends GetxController {
       Loader.close();
       Snackbar.open(
         e.toString(),
-        color: AppColors.red
+        type: SnackbarType.error
       );
     }
   }

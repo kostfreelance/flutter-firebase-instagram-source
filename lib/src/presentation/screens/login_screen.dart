@@ -34,6 +34,7 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(height: 36.h),
             AppTextField(
+              key: const Key('login_email_textfield'),
               keyboardType: TextInputType.emailAddress,
               hintText: 'Email',
               controller: loginController.emailController,
@@ -41,6 +42,7 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(height: 6.h),
             AppTextField(
+              key: const Key('login_password_textfield'),
               obscureText: true,
               hintText: 'Password',
               controller: loginController.passwordController,
@@ -49,6 +51,7 @@ class LoginScreen extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: AppButton(
+                key: const Key('login_reset_button'),
                 height: 36.h,
                 width: MediaQuery.of(context).size.width / 2,
                 padding: EdgeInsets.only(right: 10.w),
@@ -67,6 +70,7 @@ class LoginScreen extends StatelessWidget {
             ),
             Obx(() =>
               AppButton(
+                key: const Key('login_button'),
                 height: 44.h,
                 backgroundColor: AppColors.blue,
                 borderRadius: BorderRadius.circular(6.r),

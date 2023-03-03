@@ -40,6 +40,7 @@ class ResetPasswordScreen extends StatelessWidget {
             ),
             SizedBox(height: 20.h),
             AppTextField(
+              key: const Key('reset_password_email_textfield'),
               keyboardType: TextInputType.emailAddress,
               hintText: 'Email',
               controller: resetPasswordController.emailController,
@@ -48,6 +49,7 @@ class ResetPasswordScreen extends StatelessWidget {
             SizedBox(height: 20.h),
             Obx(() =>
               AppButton(
+                key: const Key('reset_password_button'),
                 height: 44.h,
                 backgroundColor: AppColors.blue,
                 borderRadius: BorderRadius.circular(6.r),
